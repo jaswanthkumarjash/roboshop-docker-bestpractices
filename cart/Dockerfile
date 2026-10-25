@@ -8,8 +8,7 @@ COPY . .
 
 FROM node:20.19.5-alpine3.21
 WORKDIR /opt/server
-RUN addgroup -S roboshop && adduser -S roboshop -G roboshop \
-    && chown -R roboshop:roboshop /opt/server
+RUN addgroup -S roboshop && adduser -S roboshop -G roboshop
 EXPOSE 8080
 LABEL com.project="roboshop" \
       com.version="1.0" \
